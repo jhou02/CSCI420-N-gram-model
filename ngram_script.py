@@ -111,8 +111,8 @@ def main():
     perplexities_test = calculate_perplexity(best_model, test_data, best_n)
     perplexities_teacher_test = calculate_perplexity(best_teacher_model, test_data, best_teacher_n)
 
-    print(f"Best student model: {best_n}-gram with test perplexity {perplexities_test}")
-    print(f"Best teacher model: {best_teacher_n}-gram with test perplexity {perplexities_teacher_test}")
+    print(f"Best student model: {best_n}-gram with test perplexity {perplexities_test:.3f}")
+    print(f"Best teacher model: {best_teacher_n}-gram with test perplexity {perplexities_teacher_test:.3f}")
     
     print(f"Testing student {best_n}-gram model")
     main_completion_results = complete_methods(best_model, test_data, best_n)
